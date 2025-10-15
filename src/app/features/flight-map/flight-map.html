@@ -1,7 +1,7 @@
 <div class="flight-map-container">
   <div class="flight-map-header">
-    <h2>Flight Map - Barcelona Departures</h2>
-    <p>Real-time flight routes from Barcelona El Prat Airport</p>
+    <h2>Flight Map - España</h2>
+    <p>100 vuelos domésticos entre aeropuertos de España</p>
   </div>
   
   <div class="globe-wrapper">
@@ -9,14 +9,19 @@
   </div>
   
   <div class="flight-info">
-    <h3>Active Flights</h3>
-    <div class="flights-list">
-      <div *ngFor="let flight of getFlightsData()" class="flight-item">
-        <div class="flight-color" [style.background-color]="flight.color || '#ff6b6b'"></div>
-        <div class="flight-details">
-          <span class="flight-number">{{ flight.airline }} {{ flight.flightNumber }}</span>
-          <span class="flight-route">BCN → {{ flight.destination }}</span>
-        </div>
+    <h3>Vuelos Activos ({{ getFlightsData().length }})</h3>
+    <div class="flight-stats">
+      <div class="stat-item">
+        <span class="stat-label">Aeropuertos:</span>
+        <span class="stat-value">20</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Aerolíneas:</span>
+        <span class="stat-value">7</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Rutas:</span>
+        <span class="stat-value">100</span>
       </div>
     </div>
   </div>

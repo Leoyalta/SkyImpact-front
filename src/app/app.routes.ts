@@ -3,6 +3,7 @@ import { Map } from './features/map/map';
 import { About } from './features/about/about';
 import { Welcome } from './features/welcome/welcome';
 import { FlightMap } from './features/flight-map/flight-map';
+import { ApiTestComponent } from './components/api-test.component';
 
 export const routes: Routes = [
        {
@@ -11,6 +12,7 @@ export const routes: Routes = [
       { path: 'map', component: Map},
       { path: 'about', component: About},
       { path: 'flight-map', component: FlightMap},
+      { path: 'api-test', component: ApiTestComponent},
       { path: '', component: Welcome }
     ],
   },

@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { MapboxService} from '../../core/services/mapbox-service';
+import {SPANISH_AIRPORTS} from '../../core/services/mapbox-service'
 
 @Component({
   selector: 'app-map',
@@ -13,6 +14,6 @@ export class Map implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.mapService.initMap('map');
-    this.mapService.addMarker(2.0769, 41.2969, 'Aeropuerto El Prat');
+    this.mapService.addAirports(SPANISH_AIRPORTS);
   }
 }

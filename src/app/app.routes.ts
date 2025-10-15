@@ -11,7 +11,9 @@ export const routes: Routes = [
       { path: 'map', component: Map},
       { path: 'about', component: About},
       { path: 'flight-map', component: FlightMap},
-      { path: '', component: Welcome }
+      { path: '', component: Welcome },
+      { path: 'welcome', component: Welcome },
+
     ],
   },
 

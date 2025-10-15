@@ -1,0 +1,8 @@
+# Angular
+.angular/
+dist/
+node_modules/
+.env
+*.log
+*.tsbuildinfo
+package-lock.json

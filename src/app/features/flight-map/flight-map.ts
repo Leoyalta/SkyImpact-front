@@ -32,10 +32,12 @@ export class FlightMap implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.globe) {
-      this.globe.destroy();
-    }
+  if (this.globe) {
+    const container = this.globeContainer.nativeElement;
+    container.innerHTML = '';
+    this.globe = null;
   }
+}
 
   private generateSpainFlights(): FlightData[] {
     const spainAirports = [
@@ -204,8 +206,6 @@ export class FlightMap implements OnInit, OnDestroy {
       
       // Log initial zoom
       const initialPov = this.globe.pointOfView();
-      console.log('Initial zoom/altitude:', initialPov.altitude);
-      console.log('Initial position:', { lat: initialPov.lat, lng: initialPov.lng });
 
       // Disable auto-rotation but allow manual movement
       this.globe.controls().autoRotate = false;
@@ -216,8 +216,6 @@ export class FlightMap implements OnInit, OnDestroy {
       // Add zoom listener to console
       this.globe.controls().addEventListener('change', () => {
         const pov = this.globe.pointOfView();
-        console.log('Current zoom/altitude:', pov.altitude);
-        console.log('Current position:', { lat: pov.lat, lng: pov.lng });
       });
 
       // Improve texture quality
@@ -229,8 +227,6 @@ export class FlightMap implements OnInit, OnDestroy {
       
       // Force render
       renderer.render();
-
-      console.log('Flight map globe initialized successfully');
     }).catch(error => {
       console.error('Error loading Globe.gl:', error);
     });

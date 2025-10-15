@@ -28,10 +28,12 @@ export class GlobeViewer implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.globe) {
-      this.globe.destroy();
-    }
+  if (this.globe) {
+    const container = this.globeContainer.nativeElement;
+    container.innerHTML = '';
+    this.globe = null;
   }
+}
 
   @HostListener('window:resize')
   onWindowResize(): void {

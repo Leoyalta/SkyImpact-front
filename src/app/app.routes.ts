@@ -9,9 +9,7 @@ export const routes: Routes = [
     children: [
       { path: 'map', component: Map},
       { path: 'about', component: About},
-      { path: '', component: Map},
       { path: '', component: Welcome }
-      
     ],
   },
 

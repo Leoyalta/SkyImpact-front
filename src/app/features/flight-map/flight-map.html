@@ -1,0 +1,28 @@
+<div class="flight-map-container">
+  <div class="flight-map-header">
+    <h2>Flight Map - España</h2>
+    <p>100 vuelos domésticos entre aeropuertos de España</p>
+  </div>
+  
+  <div class="globe-wrapper">
+    <div #globeContainer class="globe-container"></div>
+  </div>
+  
+  <div class="flight-info">
+    <h3>Vuelos Activos ({{ getFlightsData().length }})</h3>
+    <div class="flight-stats">
+      <div class="stat-item">
+        <span class="stat-label">Aeropuertos:</span>
+        <span class="stat-value">20</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Aerolíneas:</span>
+        <span class="stat-value">7</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Rutas:</span>
+        <span class="stat-value">100</span>
+      </div>
+    </div>
+  </div>
+</div>

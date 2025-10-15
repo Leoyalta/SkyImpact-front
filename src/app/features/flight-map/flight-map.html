@@ -1,0 +1,23 @@
+<div class="flight-map-container">
+  <div class="flight-map-header">
+    <h2>Flight Map - Barcelona Departures</h2>
+    <p>Real-time flight routes from Barcelona El Prat Airport</p>
+  </div>
+  
+  <div class="globe-wrapper">
+    <div #globeContainer class="globe-container"></div>
+  </div>
+  
+  <div class="flight-info">
+    <h3>Active Flights</h3>
+    <div class="flights-list">
+      <div *ngFor="let flight of getFlightsData()" class="flight-item">
+        <div class="flight-color" [style.background-color]="flight.color || '#ff6b6b'"></div>
+        <div class="flight-details">
+          <span class="flight-number">{{ flight.airline }} {{ flight.flightNumber }}</span>
+          <span class="flight-route">BCN → {{ flight.destination }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

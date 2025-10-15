@@ -1,0 +1,27 @@
+.layout-flex {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+app-navbar {
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.layout-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px; 
+  overflow-y: auto;
+}
+
+app-footer {
+  flex-shrink: 0;
+}

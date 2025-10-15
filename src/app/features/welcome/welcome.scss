@@ -1,0 +1,101 @@
+.welcome-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #646464;
+  
+  h1 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+    background: linear-gradient(45deg, #ffffff, #64b5f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .globe-section {
+    flex: 0 0 auto; // No crecer, no encoger, tamaño automático
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buttons-section {
+    padding: 20px;
+    text-align: center;
+    //background: rgba(0, 0, 0, 0.2);
+    
+    .primary-button {
+      margin: 0 10px;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(45deg, #64b5f6, #42a5f5);
+      color: white;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(100, 181, 246, 0.4);
+        background: linear-gradient(45deg, #42a5f5, #1e88e5);
+      }
+    }
+    
+    .secondary-button {
+      margin: 0 10px;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      border: 2px solid #64b5f6;
+      cursor: pointer;
+      background: transparent;
+      color: #64b5f6;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(100, 181, 246, 0.3);
+        background: #64b5f6;
+        color: white;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .welcome-container {
+    h1 {
+      font-size: 2rem;
+      padding: 15px;
+    }
+    
+    .buttons-section {
+      padding: 15px;
+      
+      .primary-button,
+      .secondary-button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.primary-button-outline {
+  background-color: transparent;
+  color: #007bff; /* color principal (azul ejemplo) */
+  border: 2px solid #007bff;
+}

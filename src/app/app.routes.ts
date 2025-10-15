@@ -13,7 +13,8 @@ export const routes: Routes = [
       { path: 'about', component: About},
       { path: 'flight-map', component: FlightMap},
       { path: 'api-test', component: ApiTestComponent},
-      { path: '', component: Welcome }
+      { path: 'welcome', component: Welcome },
+      { path: '', component: Welcome } 
     ],
   },
 

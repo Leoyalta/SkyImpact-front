@@ -4,8 +4,10 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 64px;
+  height: 56px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #696585 !important;
+  color: white
 }
 
 .navbar-container {
@@ -15,7 +17,8 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 10px;
+  height: 100%;
 }
 
 .logo-section {
@@ -30,10 +33,11 @@
 }
 
 .logo {
-  height: 40px;
+  height: 32px;
   width: auto;
   cursor: pointer;
   transition: transform 0.2s ease;
+ 
 
   &:hover {
     transform: scale(1.05);
@@ -42,7 +46,7 @@
 
 .nav-links {
   display: flex;
-  gap: 8px;
+  gap: 4px;
 }
 
 .nav-button {
@@ -51,6 +55,10 @@
   gap: 4px;
   color: white;
   transition: background-color 0.2s ease;
+   padding: 0 12px; 
+  min-height: 36px; 
+  font-size: 14px; 
+
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -68,12 +76,53 @@
 }
 
 // Responsive design
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 8px;
+  }
+  
+  .nav-button {
+    padding: 0 8px;
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 768px) {
+  .navbar {
+    height: 48px; // Even smaller on mobile
+  }
+  
+  .navbar-container {
+    padding: 0 8px;
+  }
+  
+  .logo {
+    height: 28px;
+  }
+  
+  .nav-links {
+    gap: 2px;
+  }
+  
   .nav-button {
     min-width: auto;
-    padding: 0 8px;
+    padding: 0 6px;
+    font-size: 12px;
+    min-height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 4px;
+  }
+  
+  .nav-button {
+    padding: 0 4px;
+    font-size: 11px;
     
-    span {
+    // Hide text on very small screens, keep only essential links
+    &:not(:first-child):not(:nth-child(2)) {
       display: none;
     }
   }
